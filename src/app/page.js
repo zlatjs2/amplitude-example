@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -13,7 +12,7 @@ export default function Home() {
           <code className={styles.code}>src/app/page.js</code>
         </p>
 
-        <Link href="/about/?test=11111">링크이동</Link>
+        <Link href="/about/?test=글씨야 나와랏">링크이동</Link>
       </div>
     </main>
   );

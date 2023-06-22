@@ -5,6 +5,7 @@ export default function About(props) {
   return (
     <main>
       <h2>About Page</h2>
+      {props && props.searchParams && <div>{props.searchParams.test}</div>}
     </main>
   );
 }
@@ -12,7 +13,7 @@ export default function About(props) {
 export const getServerSideProps = (context) => {
   return {
     props: {
-      context,
+      query: context.query,
     },
   };
 };
