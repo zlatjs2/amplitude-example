@@ -12,13 +12,7 @@ export default function Home() {
           <code className={styles.code}>src/app/page.js</code>
         </p>
 
-        <ul>
-          {[1, 2, 3, 4, 5].map((item, idx) => (
-            <li key={idx}>
-              <Link href={`/about/?test=${item}`}>링크이동</Link>
-            </li>
-          ))}
-        </ul>
+        <Link href="/about/?test=글씨야 나와랏">링크이동</Link>
       </div>
     </main>
   );
