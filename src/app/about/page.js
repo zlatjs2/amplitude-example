@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 export default function About(props) {
   console.log("### About props : ", props);
