@@ -1,8 +1,7 @@
 import "@/styles/globals.css";
 
 import { RecoilRoot } from "recoil";
-// import Auth from "@/components/init/Auth";
-// import Analytics from "@/components/init/Analytics";
+import AuthComponent from "@/components/AuthComponent";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
@@ -16,15 +15,13 @@ const queryClient = new QueryClient({
 });
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-
   return (
     <RecoilRoot>
       <QueryClientProvider client={queryClient}>
-        {/* <Auth> */}
-        <Component {...pageProps} />
-        <div id="modal-root"></div>
-        {/* </Auth> */}
+        <AuthComponent>
+          <Component {...pageProps} />
+          <div id="modal-root"></div>
+        </AuthComponent>
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </RecoilRoot>
